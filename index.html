@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <div id="box" style="background-color: black; color: white; padding: 30px;">
+     <h1 id="text"> find the thor</h1>   
+    </div>
+
+    <div id="boxhide" style="background-color: red; color: aqua;width: 250px;height: 250px;padding: 8px;border-radius: 8px;margin-top: 10px;">
+      <h1>this the world</h1>
+    </div>
+    <button id="hidebutton" style="background-color: aqua;color: blue;display: block;margin-top: 10px;">Hide</button>
+
+    <button id="btn" style="background-color: aqua;color: blue;margin-top: 10px;">click to change</button>
+
+
+    <script>
+
+        let boxdata = document.getElementById("box")
+        let heading = document.getElementById("text")
+        let buttondata = document.getElementById("btn")
+
+
+         buttondata.addEventListener("click",()=>{
+            boxdata.style.backgroundColor = "red"
+            boxdata.style.color = "blue"
+            heading.innerHTML = "welcome to Ascard"
+         })
+
+         let boxhide1 = document.getElementById("boxhide")
+         let bnthide1 = document.getElementById("hidebutton")
+
+
+ bnthide1.addEventListener("click",()=>{
+ if(boxhide1.style.display === "block"){
+   boxhide1.style.display = "none"
+   bnthide1.innerText = "show"
+ }else{
+            boxhide1.style.display = "block"
+            bnthide1.innerText = "Hide"
+        }
+
+
+    })
+
+    </script>
+</body>
+
+</html>
